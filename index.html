@@ -39,6 +39,13 @@
 			   var t = parseInt(t);
 			   var u = $('#unit').val();
 			   
+			   var con = conversion(t,u);
+				if(con.status == 0){
+					alert(con.message);
+			   }else{
+					var res = document.getElementById("result");
+					res.innerHTML = con.message;
+			   }
 			});
 		});
 		function validate(t){
